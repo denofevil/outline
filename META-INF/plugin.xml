@@ -1,0 +1,25 @@
+<idea-plugin version="2">
+  <id>com.github.denofevil.outline</id>
+  <name>Mimimap</name>
+  <version>1.0</version>
+  <vendor email="dennis.ushakov@jetbrains.com" url="https://github.com/denofevil/outline">Dennis Ushakov</vendor>
+
+  <description><![CDATA[
+      Adds a ST-like minimap feature to IntelliJ products.
+      It shows a smaller display of the current editor contents alongside the main editing window.
+    ]]></description>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Build+Number+Ranges for description -->
+  <idea-version since-build="131"/>
+
+  <!-- please see http://confluence.jetbrains.com/display/IDEADEV/Plugin+Compatibility+with+IntelliJ+Platform+Products
+       on how to target different products -->
+  <depends>com.intellij.modules.lang</depends>
+
+  <project-components>
+    <component>
+        <interface-class>com.github.denofevil.outline.Outliner</interface-class>
+        <implementation-class>com.github.denofevil.outline.Outliner</implementation-class>
+    </component>
+  </project-components>
+</idea-plugin>
